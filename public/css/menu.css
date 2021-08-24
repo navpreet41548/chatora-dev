@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@300&display=swap');
+
+:root{
+    --first-color: #FAAA1C;
+    --second-color: #FF497B;
+    --third-color: #59285F;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    transform-origin: right;
+    transition: all 1s ease;
+    position: relative;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*! ON Click Classes for Navbar */
+
+.body_class{
+    transform:translateX(100%)!important;
+}
+.burger_Class{
+    position: fixed!important;
+}
+
+
+.fixed-nav{
+    position: sticky!important;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    transition: all .5s ease;
+    top: 0;
+    background-color: var(--first-color);
+    z-index: 10;
+    animation: navBar_onChange 0.5s ease;
+ 
+    height: 8vh!important;
+}
+@keyframes navBar_onChange {
+    0%{
+        transform: translateY(-100%) ;
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
+
+
+.line_onClick{
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.line1_Class{
+    transform: rotate(45deg) ;
+    transform-origin: center;
+}
+.line2_Class{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.line3_Class{
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+.ul_Class{
+    transform: translateY(0%)!important;
+    transition: all 1s ease;
+}
+
+
+/* ! ---------------- */
+
+/*! NavBar Styling */
+
+.nav{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 12vh;
+    /* padding: 45px 0px; */
+    /* border-bottom: 1px solid black; */
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.logo{
+    position: absolute;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.logo img{
+    height: 70px;    
+    max-width: 100%;
+    max-height :100%;
+}
+.logo_text{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: var(--first-color);
+}
+
+
+.ul{
+    display: flex;
+}
+
+.list_items{
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.links{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    padding: 0px 20px;
+}
+
+.active{
+    color: var(--first-color);
+}
+
+.burger{
+    position: absolute;
+    right: 20px;
+    display: none;
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+
+.line{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s ease;
+}
+/* !------------------- */
+
+
+
+.menu{
+    position: relative;
+    transition: all 0.5s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    background-color: var(--first-color);
+    padding: 20px 10px;
+    height: 100%;
+    border-radius: 10px;
+}
+ 
+.menu_headerHeading{
+    font-size: 33px;
+    margin-bottom: 29px;
+    font-family: "Dancing Script", sans-serif;
+}
+
+.menu_headerComingSoon{
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+}
+.menu_headerComingSoon a{
+    color: white;
+    text-decoration: none;
+}
+
+.my_swiper_container{
+    width: 80%;
+    height: 100%;
+    overflow-x: hidden!important;
+}
+
+.swiper-pagination{
+    bottom: 0px!important;
+}
+
+.my_Slide{
+    padding: 15px 0;
+    text-align: center;
+    background-color: #353535;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    width: 180px!important;
+    display: inline-block;
+    border: 1px solid var(--second-color);
+    margin: 0 10px ;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.active_menu{
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    border-bottom: 2px solid var(--first-color);
+    width: 50%;
+}
+
+.menu_items{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.my_swiper_container2 {
+    width: 100%;
+    padding-top: 70px!important;
+    padding-bottom: 70px!important;
+}
+
+.my_slide2 {
+    background-position: center;
+    background-size: cover;
+    width: 360px!important;
+    height: 450px!important;
+}
+
+.testimonialBox{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    box-shadow: 0px 0px 20px 1px grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swiper-slide-shadow-left{
+    display: none;
+    border-radius: 10px;
+        background-image: linear-gradient(to left,rgb(0 0 0 / 7%),rgb(0 0 0 / 5%))!important;
+}
+.swiper-slide-shadow-right{
+    display: none;
+    border-radius: 10px;
+        background-image: linear-gradient(to left,rgb(0 0 0 / 7%),rgb(0 0 0 / 5%))!important;
+}
+
+.menuItem_name{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin: 10px 0px;
+    font-weight: bold;
+    width: 90%;
+}
+
+.menuItem_des{
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    text-align: center;
+    width: 90%;
+}
+
+
+.slide_img{
+    width: 90%;
+    height: 50%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+
+.oddBox > .slide_img{
+    border: 5px solid var(--second-color);
+}
+
+.oddBox > .menuItem_name{
+    color: var(--second-color);
+}
+.evenBox > .slide_img{
+    border: 5px solid var(--first-color);
+}
+
+.evenBox > .menuItem_name{
+    color: var(--first-color);
+}
+
+/*! NavBar Responsive */
+
+ 
+@media screen and (max-width: 1300px) {
+    .list_items {
+        margin: 0px 15px;
+    }
+    .links {
+        padding: 0px 15px;
+    }
+    .logo img {
+        width: 44px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .list_items {
+        margin: 0px 10px;
+    }
+    .links {
+        padding: 0px 10px;
+    }
+    .logo img {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .burger{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+   }
+   .ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    transform: translateX(100%);
+    background-image: url("../../images/background.jpg");
+    background-blend-mode:lighten;
+    transition: all 0.5s ease;
+}
+.list_items {
+    margin: 25px 10px;
+}
+.links {
+        width: 180px;
+        border: 1px solid rgb(0, 98, 255);
+        display: block;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 13px;
+        background: var(--first-color);
+    }
+
+}
+
+
+/*! menu responsive */
+
+@media screen and (max-width: 1100px) {
+    .menu_header {
+        width: 95%;
+        padding: 10px 0px;
+    }
+    .menu_headerHeading {
+        font-size: 25px;
+        margin-bottom: 22px;
+        font-family: "Dancing Script", sans-serif;
+    }
+    .menu_headerComingSoon {
+        font-size: 16px;
+        margin-top: 25px;
+        padding: 8px 15px;
+    }
+}
+
+/*! slider responsive */
+
+@media screen and (max-width: 800px) {
+    .my_slide2 {
+        width: 300px!important;
+        height: 448px!important;
+    }
+    .slide_img {
+        width: 90%;
+        height: 45%;
+    }
+}
+
+
+
+.menuItem_des{
+    display: flex;
+    justify-content: center;
+}
+.coming_soon_animation{
+    width: 50%;
+    height: auto;
+}
+
+.d_none{
+    position: absolute!important;
+    opacity: 0;
+    top: 0;
+    z-index: -100!important;
+}
+.d_none2{
+    display: none;
+}
